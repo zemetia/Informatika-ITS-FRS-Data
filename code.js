@@ -95,12 +95,9 @@ function getCourseData(rawData, dosen) {
             day[i].forEach((data, index) => {
                 splittedData = data.split('/');
         
-                if(!splittedData[0].toLowerCase().match(/sem\s[0-9]/)) {
-                    console.log("no Match");
+                if(!splittedData[0].toLowerCase().match(/sem\s[0-9]/)) 
                     return;
-                }
                     
-                
                 course = {
                     subject: day[ i - 1 ][ index ],
                     semester: splittedData[0]? Number( splittedData[0].slice(-1) ) : null,
