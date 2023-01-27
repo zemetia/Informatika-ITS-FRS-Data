@@ -3,58 +3,61 @@
 https://user-images.githubusercontent.com/27951856/215064262-9fcd97a4-e519-42f4-94d2-e9426ece398c.mp4
 
 # Langkah-Langkah
+
 - Buka Browser / Tab
 - Klik Kanan, Inspect Element
-- Buka Console 
+- Buka Console
 - Lalu, ketik code dibawah ini pada Console anda:
+
 ```js
 function getCourseData(rawData, dosen) {
-    data = rawData.split('\n');
+  data = rawData.split("\n");
 
-    let cellData = [];
+  let cellData = [];
 
-    data.forEach(value => {
-        cellData.push(value.split('\t'));
-    });
+  data.forEach((value) => {
+    cellData.push(value.split("\t"));
+  });
 
-    let header = cellData[0]; //contain the information about the class
-    let days = ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"];
-    let dayData = {};
+  let header = cellData[0]; //contain the information about the class
+  let days = ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"];
+  let dayData = {};
 
-    days.forEach((value, index) => {
-        dayData[value] = cellData.slice(1 + (14 * index), 14 * (index + 1));
-    })
+  days.forEach((value, index) => {
+    dayData[value] = cellData.slice(1 + 14 * index, 14 * (index + 1));
+  });
 
-    let courses = []
+  let courses = [];
 
-    for(const [dayName, day] of Object.entries(dayData)) {
-        for(var i = 0; i < 13; i++){
-            day[i].forEach((data, index) => {
-                splittedData = data.split('/');
-        
-                if(!splittedData[0].toLowerCase().match(/sem\s[0-9]/)) 
-                    return;
-                    
-                course = {
-                    subject: day[ i - 1 ][ index ],
-                    semester: splittedData[0]? Number( splittedData[0].slice(-1) ) : null,
-                    sks: splittedData[1]? Number( splittedData[1].slice(0, 1) ) : null,
-                    day: dayName,
-                    lecturer: splittedData[2]? dosen[ splittedData[2] ] : null,
-                    hour: [ day[i - 1][1], day[i][1] ],
-                    start: day[i - 1][1].split(' ')[0],
-                    class: header[index]
-                }
-                
-                courses.push(course);
-            });
-        }
+  for (const [dayName, day] of Object.entries(dayData)) {
+    for (var i = 0; i < 13; i++) {
+      day[i].forEach((data, index) => {
+        splittedData = data.split("/");
+
+        if (!splittedData[0].toLowerCase().match(/sem\s[0-9]/)) return;
+
+        course = {
+          subject: day[i - 1][index],
+          semester: splittedData[0] ? Number(splittedData[0].slice(-1)) : null,
+          sks: splittedData[1] ? Number(splittedData[1].slice(0, 1)) : null,
+          day: dayName,
+          lecturer: splittedData[2] ? dosen[splittedData[2]] : null,
+          hour: [day[i - 1][1], day[i][1]],
+          start: day[i - 1][1].split(" ")[0],
+          class: header[index],
+        };
+
+        courses.push(course);
+      });
     }
+  }
 
-    return courses;
+  return courses;
 }
 ```
-- Setelah itu, ketik code ``json`` berikut
+
+- Setelah itu, ketik code `json` berikut
+
 ```json
 dosen = {
     "FB": {
@@ -64,13 +67,20 @@ dosen = {
         "rekomen": 0
     },
 
+    "DS": {
+        "nama": "Dwi Sunaryono, S.Kom., M.Kom.",
+        "lab": "Algoritma dan Pemrograman",
+        "posisi": "Anggota",
+        "rekomen": 4
+    }
+
     "RL": {
         "nama": "Rully Soelaiman, S. Kom., M.Kom.",
         "lab": "Algoritma dan Pemrograman",
         "posisi": "Anggota",
         "rekomen": 3
     },
-    
+
     "IS": {
         "nama": "Irfan Subakti",
         "lab": "Algoritma dan Pemrograman",
@@ -89,7 +99,7 @@ dosen = {
         "nama": "Ir. F.X. Arunanto, M.Sc.",
         "lab": "Algoritma dan Pemrograman",
         "posisi": "Anggota",
-        "rekomen": 0
+        "rekomen": 3
     },
 
     "AB": {
@@ -105,7 +115,7 @@ dosen = {
         "posisi": "Anggota",
         "rekomen": 1
     },
-    
+
     "RM": {
         "nama": "Royyana Muslim I, S.Kom, M.Kom, Ph.D.",
         "lab": "Arsitektur dan Jaringan Komputer",
@@ -239,6 +249,13 @@ dosen = {
         "rekomen": 5
     },
 
+    "AM": {
+        "nama": "Ary Mazharuddin, PhD",
+        "lab": "Komputasi Berbasis Jaringan",
+        "posisi": "Anggota",
+        "rekomen": 0
+    },
+
     "BJ": {
         "nama": "Bagus Jati S, S.Kom, PhD",
         "lab": "Komputasi Berbasis Jaringan",
@@ -366,9 +383,12 @@ dosen = {
     }
 }
 ```
+
 - Setelah itu, masukkan jadwal berikut:
+
 ```js
-courses = getCourseData(`Hari	Jam	SKPB Reguler	SKPB IUP	IF-101	IF-102	IF-103	IF-104	IF-105b	IF-105a	IF-106	IF-107a	IF-107b	IF-108 - IUP	LP-1	LP-2	IF-111 (PASCASARJANA)	IF-112 (PASCASARJANA)
+courses = getCourseData(
+  `Hari	Jam	SKPB Reguler	SKPB IUP	IF-101	IF-102	IF-103	IF-104	IF-105b	IF-105a	IF-106	IF-107a	IF-107b	IF-108 - IUP	LP-1	LP-2	IF-111 (PASCASARJANA)	IF-112 (PASCASARJANA)
 SENIN	07.00 - 08.00	FISIKA 2			Struktur Data	Sistem Operasi	Komputasi Pervasif dan Jaringan Sensor		Probabilitas dan Statistik	Pemrograman Berbasis Kerangka Kerja							Topik Dalam Komputasi Awan - A
 	08.00 - 09.00	SEM 2			Sem 2/3 SKS/DP	Sem 4/4 SKS/BJ	Sem 8/3 SKS/RA		Sem 4/3 SKS/BA	Sem 6/3 SKS/MN							Sem 2/3 SKS/RM
 	09.00 - 10.00		FISIKA 2														
@@ -437,11 +457,15 @@ JUM'AT	07.00 - 08.00	BAHASA INGGRIS		Big Data	Dasar Pemrograman	Perancangan dan 
 	16.00 - 17.00			Sem 2/3 SKS/WS						Sem 6/4 SKS/UY							
 	17.00 - 18.00																
 	18.00 - 19.00															Metodologi Penelitian - P	Rekayasa Perangkat Lunak - P
-	19.00 - 20.30															Sem 2/3 SKS/ DP	Sem 1/3 SKS/UY`, dosen);
+	19.00 - 20.30															Sem 2/3 SKS/ DP	Sem 1/3 SKS/UY`,
+  dosen
+);
 ```
+
 - Lalu anda dapat menggunakan [Command](#command) yang ada
 
 # Command
+
 ```
 - subject
 - semester
@@ -453,31 +477,36 @@ JUM'AT	07.00 - 08.00	BAHASA INGGRIS		Big Data	Dasar Pemrograman	Perancangan dan 
 ```
 
 # Implementasi
-Menggunakan syntax sebagai berikut: 
+
+Menggunakan syntax sebagai berikut:
+
 ```js
 courses.filter(course => (isi data yang ingin dicari / Kondisi) && (bisa diisi kondisi sebanyak mungkin))
 
-Ex: 
+Ex:
 courses.filter(coursed => coursed.day=="Selasa" && coursed.start < 10 && coursed.semester==4)
 ```
 
 ### Example:
 
 day
+
 ```
 courses.filter(course => course.day="Selasa");
 ```
 
 semester
+
 ```
 courses.filter(course => course.semester=4);
 ```
 
 start
+
 ```
 courses.filter(course => course.start < 10)
 ```
 
+## Result
 
-## Result 
 ![image](https://user-images.githubusercontent.com/92671053/215085420-4703a25e-bc6f-4f4c-bc73-c35f3acb78c0.png)
