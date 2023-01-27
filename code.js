@@ -97,13 +97,21 @@ function getCourseData(rawData, dosen) {
         
                 if(!splittedData[0].toLowerCase().match(/sem\s[0-9]/)) 
                     return;
+
+                let rawLecturer = splittedData[2]? splittedData[2].split(' - ') : null;
+                let lecturer = [];
+                if( rawLecturer ) {
+                    rawLecturer.forEach( data => {
+                        lecturer.push(data);
+                    });
+                }
                     
                 course = {
                     subject: day[ i - 1 ][ index ],
                     semester: splittedData[0]? Number( splittedData[0].slice(-1) ) : null,
                     sks: splittedData[1]? Number( splittedData[1].slice(0, 1) ) : null,
                     day: dayName,
-                    lecturer: splittedData[2]? dosen[ splittedData[2] ] : null,
+                    lecturer: lecturer,
                     hour: [ day[i - 1][1], day[i][1] ],
                     start: day[i - 1][1].split(' ')[0],
                     class: header[index]
