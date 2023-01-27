@@ -1,10 +1,8 @@
-# Informatika-ITS-FRS-Data
-
-## Dokumentasi
+# Dokumentasi
 
 https://user-images.githubusercontent.com/27951856/215064262-9fcd97a4-e519-42f4-94d2-e9426ece398c.mp4
 
-## Langkah-Langkah
+# Langkah-Langkah
 - Buka Browser / Tab
 - Klik Kanan, Inspect Element
 - Buka Console 
@@ -370,7 +368,7 @@ dosen = {
 ```
 - Setelah itu, masukkan jadwal berikut:
 ```js
-course = getCourseData(`Hari	Jam	SKPB Reguler	SKPB IUP	IF-101	IF-102	IF-103	IF-104	IF-105b	IF-105a	IF-106	IF-107a	IF-107b	IF-108 - IUP	LP-1	LP-2	IF-111 (PASCASARJANA)	IF-112 (PASCASARJANA)
+courses = getCourseData(`Hari	Jam	SKPB Reguler	SKPB IUP	IF-101	IF-102	IF-103	IF-104	IF-105b	IF-105a	IF-106	IF-107a	IF-107b	IF-108 - IUP	LP-1	LP-2	IF-111 (PASCASARJANA)	IF-112 (PASCASARJANA)
 SENIN	07.00 - 08.00	FISIKA 2			Struktur Data	Sistem Operasi	Komputasi Pervasif dan Jaringan Sensor		Probabilitas dan Statistik	Pemrograman Berbasis Kerangka Kerja							Topik Dalam Komputasi Awan - A
 	08.00 - 09.00	SEM 2			Sem 2/3 SKS/DP	Sem 4/4 SKS/BJ	Sem 8/3 SKS/RA		Sem 4/3 SKS/BA	Sem 6/3 SKS/MN							Sem 2/3 SKS/RM
 	09.00 - 10.00		FISIKA 2														
@@ -441,6 +439,45 @@ JUM'AT	07.00 - 08.00	BAHASA INGGRIS		Big Data	Dasar Pemrograman	Perancangan dan 
 	18.00 - 19.00															Metodologi Penelitian - P	Rekayasa Perangkat Lunak - P
 	19.00 - 20.30															Sem 2/3 SKS/ DP	Sem 1/3 SKS/UY`, dosen);
 ```
-- Lalu anda dapat menggunakan [Command](##command) yang ada
+- Lalu anda dapat menggunakan [Command](#command) yang ada
 
-## Command
+# Command
+```
+- subject
+- semester
+- sks
+- day
+- lecturer
+- hour
+- start
+```
+
+# Implementasi
+Menggunakan syntax sebagai berikut: 
+```js
+courses.filter(course => (isi data yang ingin dicari / Kondisi) && (bisa diisi kondisi sebanyak mungkin))
+
+Ex: 
+course.filter(coursed => coursed.day=="Selasa" && coursed.start < 10 && coursed.semester==4)
+```
+
+### Example:
+
+day
+```
+courses.filter(course => course.day="Selasa");
+```
+
+semester
+```
+courses.filter(course => course.semester=4);
+```
+
+start
+```
+courses.filter(course => course.start < 10)
+```
+
+
+## Result 
+![image](https://user-images.githubusercontent.com/92671053/215085420-4703a25e-bc6f-4f4c-bc73-c35f3acb78c0.png)
