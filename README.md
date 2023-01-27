@@ -458,7 +458,7 @@ Menggunakan syntax sebagai berikut:
 courses.filter(course => (isi data yang ingin dicari / Kondisi) && (bisa diisi kondisi sebanyak mungkin))
 
 Ex: 
-course.filter(coursed => coursed.day=="Selasa" && coursed.start < 10 && coursed.semester==4)
+courses.filter(coursed => coursed.day=="Selasa" && coursed.start < 10 && coursed.semester==4)
 ```
 
 ### Example:
