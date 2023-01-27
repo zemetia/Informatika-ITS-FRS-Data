@@ -102,7 +102,7 @@ function getCourseData(rawData, dosen) {
                 let lecturer = [];
                 if( rawLecturer ) {
                     rawLecturer.forEach( data => {
-                        lecturer.push(data);
+                        lecturer.push( dosen[ data ] );
                     });
                 }
                     
