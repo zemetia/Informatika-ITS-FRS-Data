@@ -3,7 +3,7 @@
     "nama": "Fajar Baskoro, S.Kom., M.T.",
     "lab": "Algoritma dan Pemrograman",
     "posisi": "Anggota",
-    "rekomen": 0
+    "rekomen": 3
   },
 
   "DS": {
@@ -17,14 +17,14 @@
     "nama": "Rully Soelaiman, S. Kom., M.Kom.",
     "lab": "Algoritma dan Pemrograman",
     "posisi": "Anggota",
-    "rekomen": 3
+    "rekomen": 1
   },
 
   "IS": {
     "nama": "Irfan Subakti",
     "lab": "Algoritma dan Pemrograman",
     "posisi": "Anggota",
-    "rekomen": 0
+    "rekomen": 4
   },
 
   "DP": {
@@ -38,7 +38,7 @@
     "nama": "Ir. F.X. Arunanto, M.Sc.",
     "lab": "Algoritma dan Pemrograman",
     "posisi": "Anggota",
-    "rekomen": 0
+    "rekomen": 2
   },
 
   "AB": {
@@ -66,7 +66,7 @@
     "nama": "Dr. Eng. Radityo Anggoro, S.Kom, M.Eng.",
     "lab": "Arsitektur dan Jaringan Komputer",
     "posisi": "Anggota",
-    "rekomen": 0
+    "rekomen": 4
   },
 
   "WS": {
@@ -87,49 +87,49 @@
     "nama": "Dr. Ahmad Saikhu, S, Si, MT.",
     "lab": "Pemodelan dan Terapan Komputasi",
     "posisi": "Anggota",
-    "rekomen": 0
+    "rekomen": 3
   },
 
   "VH": {
     "nama": "Victor Hariadi, S.Si, M.Kom",
     "lab": "Pemodelan dan Terapan Komputasi",
     "posisi": "Ketua",
-    "rekomen": 3
+    "rekomen": 2
   },
 
   "BA": {
     "nama": "Bilqis Amaliah, S.Kom, M. Kom",
     "lab": "Pemodelan dan Terapan Komputasi",
     "posisi": "TB",
-    "rekomen": 3
+    "rekomen": 1
   },
 
   "AW": {
     "nama": "Arya Yudhi Wijaya, S.Kom., M.Kom.",
     "lab": "Pemodelan dan Terapan Komputasi",
     "posisi": "Anggota",
-    "rekomen": 0
+    "rekomen": 3
   },
 
   "YP": {
     "nama": "Yudhi Purwananto, S. Kom, M.Kom.",
     "lab": "Pemodelan dan Terapan Komputasi",
     "posisi": "Anggota",
-    "rekomen": 0
+    "rekomen": 5
   },
 
   "DH": {
     "nama": "Dr. Darlis Herumurti",
     "lab": "Grafika Interaksi dan Game",
     "posisi": "Anggota",
-    "rekomen": 0
+    "rekomen": 2
   },
 
   "AY": {
     "nama": "Anny Yuniarti, S.Kom, M.Comp.Sc.",
     "lab": "Grafika Interaksi dan Game",
     "posisi": "TB",
-    "rekomen": 0
+    "rekomen": 5
   },
 
   "IM": {
@@ -143,7 +143,7 @@
     "nama": "Wijayanti Nurul Khotimah, S. Kom., M.Sc TB",
     "lab": "Grafika Interaksi dan Game",
     "posisi": "TB",
-    "rekomen": 0
+    "rekomen": 2
   },
 
   "HF": {
@@ -157,7 +157,7 @@
     "nama": "Siska Arifiani, S. Kom, M.Kom",
     "lab": "Grafika Interaksi dan Game",
     "posisi": "Anggota",
-    "rekomen": 0
+    "rekomen": 2
   },
 
   "WW": {
@@ -171,14 +171,14 @@
     "nama": "Tohari Ahmad, S.Kom, M.IT, Ph.D",
     "lab": "Komputasi Berbasis Jaringan",
     "posisi": "Ketua",
-    "rekomen": 3
+    "rekomen": 2
   },
 
   "HS": {
     "nama": "Hudan Studiawan, S. Kom, M.Kom",
     "lab": "Komputasi Berbasis Jaringan",
     "posisi": "TB",
-    "rekomen": 0
+    "rekomen": 4
   },
 
   "BS": {
@@ -192,7 +192,7 @@
     "nama": "Ary Mazharuddin, PhD",
     "lab": "Komputasi Berbasis Jaringan",
     "posisi": "Anggota",
-    "rekomen": 0
+    "rekomen": 1
   },
 
   "BJ": {
@@ -213,21 +213,21 @@
     "nama": "Dr. Eng. Nanik Suciati, S.Kom, M.Kom",
     "lab": "Komputasi Cerdas dan Visi",
     "posisi": "Ketua",
-    "rekomen": 0
+    "rekomen": 5
   },
 
   "CF": {
     "nama": "Dr. Eng. ChastineFatichah, S.Kom, M.Kd",
     "lab": "Komputasi Cerdas dan Visi",
     "posisi": "Anggota",
-    "rekomen": 0
+    "rekomen": 5
   },
 
   "DA": {
     "nama": "Dini Adni Navastara, S.Kom., M.Sc.",
     "lab": "Komputasi Cerdas dan Visi",
     "posisi": "Anggota",
-    "rekomen": 0
+    "rekomen": 1
   },
 
   "AZ": {
@@ -262,21 +262,21 @@
     "nama": "Ratih Nur Esti Anggraini, S.Kom, M.Sc.,",
     "lab": "Manajemen Cerdas Informasi",
     "posisi": "TB",
-    "rekomen": 0
+    "rekomen": 5
   },
 
   "MN": {
     "nama": "Abdul Munif, S.Kom., M.Sc.",
     "lab": "Manajemen Cerdas Informasi",
     "posisi": "Anggota",
-    "rekomen": 0
+    "rekomen": 2
   },
 
   "SC": {
     "nama": "Shintami, S.Kom, PhD",
     "lab": "Manajemen Cerdas Informasi",
     "posisi": "Anggota",
-    "rekomen": 0
+    "rekomen": 4
   },
 
   "KR": {
@@ -290,14 +290,14 @@
     "nama": "Dr.Ir. Siti Rochimah, MT",
     "lab": "Rekayasa Perangkat Lunak",
     "posisi": "Ketua",
-    "rekomen": 0
+    "rekomen": 1
   },
 
   "DO": {
     "nama": "Daniel O. Siahaan, S.Kom. M,Sc, PD.Eng",
     "lab": "Rekayasa Perangkat Lunak",
     "posisi": "Anggota",
-    "rekomen": 0
+    "rekomen": 3
   },
 
   "SR": {
