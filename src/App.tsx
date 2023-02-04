@@ -1,7 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
 import Schedule from './components/schedule/Schedule';
-import './App.css';
 
 function App() {
   return (
