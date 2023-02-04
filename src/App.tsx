@@ -1,10 +1,15 @@
 import React from 'react';
+<<<<<<< Updated upstream
 import logo from './logo.svg';
 import './App.css';
+=======
+import Search from './components/search/Search';
+>>>>>>> Stashed changes
 
 function App() {
   return (
     <div className="App">
+<<<<<<< Updated upstream
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p className='text-red-500'>
@@ -19,6 +24,9 @@ function App() {
           Learn React
         </a>
       </header>
+=======
+      <Search/>
+>>>>>>> Stashed changes
     </div>
   );
 }
