@@ -1,24 +1,7 @@
 import {useState, ChangeEvent, useEffect} from 'react';
 import Dosen from '../../assets/json/dosen.json'
-
-interface DosenInterface {
-    nama: string,
-    lab: string,
-    posisi: string,
-    rekomen: number
-}
-  
-interface SubjectInterface {
-    subject: string,
-    subjectClass: string,
-    classRoom: string,
-    semester: number,
-    sks: number,
-    day: string,
-    lecturer: Array<DosenInterface>,
-    hour: string,
-    start: string,
-}
+import DosenInterface from '../../interfaces/DosenInterface';
+import SubjectInterface from '../../interfaces/SubjectInterface';
 
 function Schedule() {
     const [jadwal, setJadwal] = useState<string>("")
