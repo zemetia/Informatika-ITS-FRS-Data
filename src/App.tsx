@@ -1,6 +1,11 @@
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
+import Search from './components/search/Search';
 import {useState} from 'react';
 import Schedule from './components/schedule/Schedule';
 import SubjectInterface from './interfaces/SubjectInterface';
+
 
 function App() {
   const [schedules, setSchedules] = useState<Array<SubjectInterface>>([{
@@ -20,6 +25,7 @@ function App() {
       <header className="App-header">
         <Schedule/>
       </header>
+      <Search/>
     </div>
   );
 }
