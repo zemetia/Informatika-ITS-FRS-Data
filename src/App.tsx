@@ -1,9 +1,8 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 import Search from './components/search/Search';
 import {useState} from 'react';
 import Schedule from './components/schedule/Schedule';
+import Filtered from './components/popup_overlay/Filtered';
 import SubjectInterface from './interfaces/SubjectInterface';
 
 
@@ -23,9 +22,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Schedule/>
+        {/* <Schedule /> */}
       </header>
       <Search/>
+      <Filtered />
     </div>
   );
 }
