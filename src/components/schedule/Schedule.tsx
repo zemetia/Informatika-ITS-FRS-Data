@@ -1,7 +1,7 @@
-import {useState, ChangeEvent, useEffect} from 'react';
+import {useState, ChangeEvent, useEffect} from 'react'
 import Dosen from '../../assets/json/dosen.json'
-import DosenInterface from '../../interfaces/DosenInterface';
-import SubjectInterface from '../../interfaces/SubjectInterface';
+import DosenInterface from '../../interfaces/DosenInterface'
+import SubjectInterface from '../../interfaces/SubjectInterface'
 
 function Schedule() {
     const [jadwal, setJadwal] = useState<string>("")
@@ -9,14 +9,14 @@ function Schedule() {
 
     const onJadwalChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
         setJadwal(e.target.value)
-    };
+    }
     
     const getCourseData = (rawData: string, dosen: {[key: string]: DosenInterface}): Array<SubjectInterface> => {
         let data: Array<string> = rawData.split('\n')
-        let cellData: Array<Array<string>> = [];
+        let cellData: Array<Array<string>> = []
         data.forEach(value => cellData.push(value.split('\t')))
     
-        let header: Array<string> = cellData[0]; //contain the information about the class
+        let header: Array<string> = cellData[0] //contain the information about the class
         let days: Array<string> = ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"]
         let dayData: { [key: string]: Array<Array<string>> } = {}
     
@@ -27,42 +27,38 @@ function Schedule() {
         let courses: Array<SubjectInterface> = []
     
         for(const [dayName, day] of Object.entries(dayData)) {
-            let course: SubjectInterface
+            day.forEach((dayValue, dayIndex) => {
+                dayValue.forEach((schValue, schIndex) => {
+                    var splittedData: Array<string> = schValue.split('/')
 
-            for(var i = 0; i < 13; i++){
-                day[i].forEach((data, index) => {
-                    let splittedData: Array<string> = data.split('/');
-
-                    if(!splittedData[0].toLowerCase().match(/sem\s[0-9]/)) 
-                        return;
-
-                    let splittedSubject: Array<string> = day[ i - 1 ][ index ].split('-')
+                    if(splittedData[0].toLowerCase().match(/sem\s[0-9]/)) {
+                        var splittedSubject: Array<string> = day[ dayIndex - 1 ][ schIndex ].split('-')
 
                     //Subject - Class split
-                    let subject: string = splittedSubject[0].trim()
-                    let subjectClass: string = splittedSubject[1]? splittedSubject[1].trim() : "None" 
+                    var subject: string = splittedSubject[0].trim()
+                    var subjectClass: string = splittedSubject[1]? splittedSubject[1].trim() : "None" 
 
                     //Semester / SKS / Lecturer 
     
-                    let semester:number = splittedData[0]? Number( splittedData[0].slice(-1) ) : 0
-                    let sks: number = splittedData[1]? Number( splittedData[1].slice(0, 1) ) : 0
-                    let rawLecturer = splittedData[2]? splittedData[2].split(' - ') : null;
-                    let lecturer: Array<DosenInterface> = [];
+                    var semester:number = splittedData[0]? Number( splittedData[0].slice(-1) ) : 0
+                    var sks: number = splittedData[1]? Number( splittedData[1].slice(0, 1) ) : 0
+                    var rawLecturer = splittedData[2]? splittedData[2].split(' - ') : null
+                    var lecturer: Array<DosenInterface> = []
                     if( rawLecturer ) {
-                        rawLecturer.forEach( data => {
-                            lecturer.push( dosen[ data ] );
-                        });
+                        rawLecturer.forEach( schValue => {
+                            lecturer.push( dosen[ schValue ] )
+                        })
                     }
 
                     //Hour Processing
-                    let start:string = day[i - 1][1].split("-")[0].trim()
-                    let end:string = day[i][1].split("-")[1].trim()
-                    let fullTime = start + " - " + end
+                    var start:string = day[dayIndex - 1][1].split("-")[0].trim()
+                    var end:string = day[dayIndex][1].split("-")[1].trim()
+                    var fullTime = start + " - " + end
 
-                    course = {
+                    var course: SubjectInterface = {
                         subject: subject,
                         subjectClass: subjectClass,
-                        classRoom: header[index],
+                        classRoom: header[schIndex],
                         semester: semester,
                         sks: sks,
                         day: dayName,
@@ -71,12 +67,13 @@ function Schedule() {
                         start: start,
                     }
                     
-                    courses.push(course);
-                });
-            }
+                    courses.push(course)
+                    }
+                })
+            })
         }
     
-        return courses;
+        return courses
     }
 
     useEffect(() => {
@@ -89,7 +86,7 @@ function Schedule() {
             }
         }
 
-        checkLocalSchedule();
+        checkLocalSchedule()
     }, [])
 
     return (
