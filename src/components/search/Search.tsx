@@ -1,5 +1,5 @@
-import React from "react";
-import SubjectInterface from "../../interfaces/SubjectInterface";
+import React, { useState } from "react";
+import FilterInterface from "../../interfaces/FilterInterface";
 
 interface SearchProps {
     allSchedule: Array<SubjectInterface>
@@ -9,15 +9,87 @@ function Search({allSchedule}: SearchProps) {
     const filters = [
         "subject",
         "semester",
-        "start time",
+        "start_time",
         "day",
         "dosen",
         "class",
         "sks",
     ];
 
-    
-    
+    const filteredItems = [
+        {
+            subject: "PAA",
+            class: "A",
+            day: "Monday",
+            start_time: "7:00",
+        },
+        {
+            subject: "PAA",
+            class: "A",
+            day: "Monday",
+            start_time: "7:00",
+        },
+        {
+            subject: "PAA",
+            class: "A",
+            day: "Monday",
+            start_time: "7:00",
+        },
+        {
+            subject: "PAA",
+            class: "A",
+            day: "Monday",
+            start_time: "7:00",
+        },
+        {
+            subject: "PAA",
+            class: "A",
+            day: "Monday",
+            start_time: "7:00",
+        },
+        {
+            subject: "PAA",
+            class: "A",
+            day: "Monday",
+            start_time: "7:00",
+        },
+        {
+            subject: "PAA",
+            class: "A",
+            day: "Monday",
+            start_time: "7:00",
+        },
+    ];
+
+    const defaultFilterValue: FilterInterface = {
+      checked: false,
+      value: "",
+    }
+
+    const [ filterData, setFilterData ] = useState<{[key: string]: FilterInterface}>(
+      {
+        subject: defaultFilterValue,
+        semester: defaultFilterValue,
+        start_time: defaultFilterValue,
+        day: defaultFilterValue,
+        dosen: defaultFilterValue,
+        class: defaultFilterValue,
+        sks: defaultFilterValue,
+      }
+    );
+
+    const handleFilterCheckedChange = (filter: string) => {
+      const newFilterData = Object.assign({}, filterData)
+      newFilterData[filter].checked = true
+      setFilterData(newFilterData)
+    }
+
+    const handleFilterValueChange = (filter: string, value: string) => {
+      const newFilterData = Object.assign({}, filterData)
+      newFilterData[filter].value = value
+      setFilterData(newFilterData)
+    }
+
     return (
         <main className="flex justify-between">
             <section className="relative min-h-screen h-screen border-r-2 border-gray-500 w-[30%]">
@@ -33,12 +105,12 @@ function Search({allSchedule}: SearchProps) {
                             >
                                 {filters.map((filter) => {
                                     return (
-                                        <div className="w-full flex justify-between pb-4">
+                                        <div className="w-full flex justify-between pb-4" key={filter}>
                                             <div>
-                                                <input type="checkbox"></input>
+                                                <input type="checkbox" onChange={(e) => handleFilterCheckedChange(filter)}></input>
                                                 <label className="ml-5">{filter}</label>
                                             </div>
-                                            <input type="text"></input>
+                                            <input type="text" onChange={(e) => handleFilterValueChange(filter, e.target.value)}></input>
                                         </div>
                                     );
                                 })}
