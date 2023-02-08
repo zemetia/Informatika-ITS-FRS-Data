@@ -8,4 +8,4 @@ function SubjectClass() {
     )
 }
 
-export default SubjectClass
+export default SubjectClass;
