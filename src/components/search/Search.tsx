@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
+import FilterInterface from "../../interfaces/FilterInterface";
 
 function Search() {
     const filters = [
         "subject",
         "semester",
-        "start time",
+        "start_time",
         "day",
         "dosen",
         "class",
@@ -56,6 +57,35 @@ function Search() {
         },
     ];
 
+    const defaultFilterValue: FilterInterface = {
+      checked: false,
+      value: "",
+    }
+
+    const [ filterData, setFilterData ] = useState<{[key: string]: FilterInterface}>(
+      {
+        subject: defaultFilterValue,
+        semester: defaultFilterValue,
+        start_time: defaultFilterValue,
+        day: defaultFilterValue,
+        dosen: defaultFilterValue,
+        class: defaultFilterValue,
+        sks: defaultFilterValue,
+      }
+    );
+
+    const handleFilterCheckedChange = (filter: string) => {
+      const newFilterData = Object.assign({}, filterData)
+      newFilterData[filter].checked = true
+      setFilterData(newFilterData)
+    }
+
+    const handleFilterValueChange = (filter: string, value: string) => {
+      const newFilterData = Object.assign({}, filterData)
+      newFilterData[filter].value = value
+      setFilterData(newFilterData)
+    }
+
     return (
         <main className="flex justify-between">
             <section className="relative min-h-screen h-screen border-r-2 border-gray-500 w-[30%]">
@@ -71,12 +101,12 @@ function Search() {
                             >
                                 {filters.map((filter) => {
                                     return (
-                                        <div className="w-full flex justify-between pb-4">
+                                        <div className="w-full flex justify-between pb-4" key={filter}>
                                             <div>
-                                                <input type="checkbox"></input>
+                                                <input type="checkbox" onChange={(e) => handleFilterCheckedChange(filter)}></input>
                                                 <label className="ml-5">{filter}</label>
                                             </div>
-                                            <input type="text"></input>
+                                            <input type="text" onChange={(e) => handleFilterValueChange(filter, e.target.value)}></input>
                                         </div>
                                     );
                                 })}
