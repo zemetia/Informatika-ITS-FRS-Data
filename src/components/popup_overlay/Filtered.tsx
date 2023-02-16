@@ -1,7 +1,11 @@
 import { useState } from "react";
 
-const Filtered = () => {
-  const [showView, setShowView] = useState<boolean>(true);
+interface FilterProps {
+  showModal: boolean;
+  setShowModal: (data: boolean) => void;
+}
+
+const Filtered = ({showModal, setShowModal}: FilterProps) => {
 
   const dataTest = [
     "subject",
@@ -36,14 +40,14 @@ const Filtered = () => {
 
   return (
     <>
-      {showView ? (
+      {showModal ? (
         <>
           <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none rounded">
             <div className="fixed w-1/2 my-6 mx-auto max-w-3xl">
               <div className="border-0 p-4 rounded-sm shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                 <button
                   className="p-1 ml-auto border-0 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
-                  onClick={() => setShowView(false)}
+                  onClick={() => setShowModal(false)}
                 >
                   <span className="">
                     <svg

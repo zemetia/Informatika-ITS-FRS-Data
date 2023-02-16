@@ -7,7 +7,8 @@ import SubjectInterface from './interfaces/SubjectInterface';
 
 
 function App() {
-  const [schedules, setSchedules] = useState<Array<SubjectInterface>>([{
+  /*
+  {
     subject: "",
     subjectClass: "",
     classRoom: "",
@@ -17,15 +18,21 @@ function App() {
     lecturer: [],
     hour: "",
     start: ""
-  }])
+  }
+  */
+  // const [schedules, setSchedules] = useState<Array<SubjectInterface>>([])
+
+  const [allSchedules, setAllSchedules] = useState< Array<SubjectInterface> >([])
+  const [showSchedule, setShowSchedule] = useState< boolean >(true)
+  const [showDetail, setShowDetail] = useState< boolean >(false)
 
   return (
     <div className="App">
       <header className="App-header">
-        <Schedule />
+        <Schedule showModal={showSchedule} setShowModal={setShowSchedule} setSchedules={setAllSchedules} />
       </header>
-      <Search/>
-      <Filtered />
+      <Search />
+      <Filtered showModal={showDetail} setShowModal={setShowDetail} />
     </div>
   );
 }

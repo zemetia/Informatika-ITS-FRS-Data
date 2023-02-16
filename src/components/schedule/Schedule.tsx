@@ -3,9 +3,14 @@ import Dosen from '../../assets/json/dosen.json'
 import DosenInterface from '../../interfaces/DosenInterface'
 import SubjectInterface from '../../interfaces/SubjectInterface'
 
-function Schedule() {
+interface ScheduleProps {
+    showModal: boolean;
+    setShowModal: (data: boolean) => void;
+    setSchedules: (data: Array<SubjectInterface>) => void;
+}
+
+function Schedule({showModal, setShowModal, setSchedules}: ScheduleProps) {
     const [jadwal, setJadwal] = useState<string>("")
-    const [showModal, setShowModal] = useState<boolean>(true)
 
     const onJadwalChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
         setJadwal(e.target.value)
@@ -130,7 +135,7 @@ function Schedule() {
                     onClick={() => {
                         setShowModal(false)
                         localStorage.setItem('schedule', jadwal)
-                        console.log(getCourseData(jadwal, Dosen))
+                        setSchedules(getCourseData(jadwal, Dosen))
                     }}
                     >
                     Save
@@ -140,7 +145,7 @@ function Schedule() {
                     type="button"
                     onClick={() => {
                         setShowModal(false)
-                        console.log(getCourseData(jadwal, Dosen))
+                        setSchedules(getCourseData(jadwal, Dosen))
                     }}
                     >
                     Just Once
