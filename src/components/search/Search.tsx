@@ -1,6 +1,11 @@
 import React from "react";
+import SubjectInterface from "../../interfaces/SubjectInterface";
 
-function Search() {
+interface SearchProps {
+    allSchedule: Array<SubjectInterface>
+}
+
+function Search({allSchedule}: SearchProps) {
     const filters = [
         "subject",
         "semester",
@@ -11,51 +16,8 @@ function Search() {
         "sks",
     ];
 
-    const filteredItems = [
-        {
-            subject: "PAA",
-            class: "A",
-            day: "Monday",
-            start_time: "7:00",
-        },
-        {
-            subject: "PAA",
-            class: "A",
-            day: "Monday",
-            start_time: "7:00",
-        },
-        {
-            subject: "PAA",
-            class: "A",
-            day: "Monday",
-            start_time: "7:00",
-        },
-        {
-            subject: "PAA",
-            class: "A",
-            day: "Monday",
-            start_time: "7:00",
-        },
-        {
-            subject: "PAA",
-            class: "A",
-            day: "Monday",
-            start_time: "7:00",
-        },
-        {
-            subject: "PAA",
-            class: "A",
-            day: "Monday",
-            start_time: "7:00",
-        },
-        {
-            subject: "PAA",
-            class: "A",
-            day: "Monday",
-            start_time: "7:00",
-        },
-    ];
-
+    
+    
     return (
         <main className="flex justify-between">
             <section className="relative min-h-screen h-screen border-r-2 border-gray-500 w-[30%]">
@@ -95,14 +57,14 @@ function Search() {
             </section>
             <section className="min-h-screen w-[70%] grid grid-cols-2 overflow-auto h-screen">
                 {
-                    filteredItems.map(item => {
+                    allSchedule.map(item => {
                         return (
                             <div className="flex justify-center mt-10 mb-10">
                                 <div className="card">
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
+                                    <div>{item.subject}</div>
+                                    <div>{item.subjectClass}</div>
+                                    <div>{item.day} - {item.hour}</div>
+                                    <div>{item.classRoom}</div>
                                 </div>
                             </div>
                         )
