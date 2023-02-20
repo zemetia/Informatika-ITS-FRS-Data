@@ -16,80 +16,8 @@ function Search({allSchedule}: SearchProps) {
         "sks",
     ];
 
-    const filteredItems = [
-        {
-            subject: "PAA",
-            class: "A",
-            day: "Monday",
-            start_time: "7:00",
-        },
-        {
-            subject: "PAA",
-            class: "A",
-            day: "Monday",
-            start_time: "7:00",
-        },
-        {
-            subject: "PAA",
-            class: "A",
-            day: "Monday",
-            start_time: "7:00",
-        },
-        {
-            subject: "PAA",
-            class: "A",
-            day: "Monday",
-            start_time: "7:00",
-        },
-        {
-            subject: "PAA",
-            class: "A",
-            day: "Monday",
-            start_time: "7:00",
-        },
-        {
-            subject: "PAA",
-            class: "A",
-            day: "Monday",
-            start_time: "7:00",
-        },
-        {
-            subject: "PAA",
-            class: "A",
-            day: "Monday",
-            start_time: "7:00",
-        },
-    ];
-
-    const defaultFilterValue: FilterInterface = {
-      checked: false,
-      value: "",
-    }
-
-    const [ filterData, setFilterData ] = useState<{[key: string]: FilterInterface}>(
-      {
-        subject: defaultFilterValue,
-        semester: defaultFilterValue,
-        start_time: defaultFilterValue,
-        day: defaultFilterValue,
-        dosen: defaultFilterValue,
-        class: defaultFilterValue,
-        sks: defaultFilterValue,
-      }
-    );
-
-    const handleFilterCheckedChange = (filter: string) => {
-      const newFilterData = Object.assign({}, filterData)
-      newFilterData[filter].checked = true
-      setFilterData(newFilterData)
-    }
-
-    const handleFilterValueChange = (filter: string, value: string) => {
-      const newFilterData = Object.assign({}, filterData)
-      newFilterData[filter].value = value
-      setFilterData(newFilterData)
-    }
-
+    
+    
     return (
         <main className="flex justify-between">
             <section className="relative min-h-screen h-screen border-r-2 border-gray-500 w-[30%]">
@@ -102,6 +30,7 @@ function Search({allSchedule}: SearchProps) {
                             <form
                                 className="flex justify-center flex-col w-full"
                                 id="filter"
+                                onSubmit={(e) => handleFilter(e)}
                             >
                                 {filters.map((filter) => {
                                     return (
@@ -137,6 +66,9 @@ function Search({allSchedule}: SearchProps) {
                                     <div>{item.subjectClass}</div>
                                     <div>{item.day} - {item.hour}</div>
                                     <div>{item.classRoom}</div>
+                                    <div>{item.subject}</div>
+                                    <div>{item.semester}</div>
+                                    <div>{item.sks}</div>
                                 </div>
                             </div>
                         )
