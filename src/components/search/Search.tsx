@@ -16,7 +16,8 @@ function Search({allSchedule}: SearchProps) {
         "sks",  
         "day",
         "start",
-        "lecturer"
+        "lecturer",
+        "subjectClass"
     ];
 
     const defaultFilterValue: FilterInterface = {
@@ -31,7 +32,8 @@ function Search({allSchedule}: SearchProps) {
             sks: defaultFilterValue,
             start: defaultFilterValue,
             day: defaultFilterValue,
-            lecturer: defaultFilterValue
+            lecturer: defaultFilterValue,
+            subjectClass: defaultFilterValue
         }
     );
 
