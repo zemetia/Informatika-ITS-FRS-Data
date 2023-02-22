@@ -1,4 +1,6 @@
-import React from "react";
+import React, { FormEvent, useState } from "react";
+import DosenInterface from "../../interfaces/DosenInterface";
+import FilterInterface from "../../interfaces/FilterInterface";
 import SubjectInterface from "../../interfaces/SubjectInterface";
 import Card from "./Card"
 
@@ -7,18 +9,88 @@ interface SearchProps {
 }
 
 function Search({allSchedule}: SearchProps) {
+    const [filteredItems, setFilteredItems] = useState<SubjectInterface[]>(allSchedule)
     const filters = [
         "subject",
         "semester",
-        "start time",
+        "sks",  
         "day",
-        "dosen",
-        "class",
-        "sks",
+        "start",
+        "lecturer"
     ];
 
+    const defaultFilterValue: FilterInterface = {
+        checked: false,
+        value: "",
+    }
+
+    const [ filterData, setFilterData ] = useState<{[key: string]: FilterInterface}>(
+        {
+            subject: defaultFilterValue,
+            semester: defaultFilterValue,
+            sks: defaultFilterValue,
+            start: defaultFilterValue,
+            day: defaultFilterValue,
+            lecturer: defaultFilterValue
+        }
+    );
+
+    const handleFilterCheckedChange = (filter: string) => {
+        const { [filter]: key, ...rest } = filterData
+        const newFilterData = rest
+
+        newFilterData[filter] = {
+            checked: !key.checked,
+            value: key.value
+        }
+
+        setFilterData(newFilterData)
+    }
+
+    const handleFilterValueChange = (filter: string, value: string) => {
+        const { [filter]: key, ...rest } = filterData
+        const newFilterData = rest
+
+        newFilterData[filter] = {
+            checked: key.checked,
+            value: value
+        }
+        setFilterData(newFilterData)
+    }
+
+    const filterSubject = (subject: SubjectInterface, filter: string) => {
+        const value = filterData[filter].value
+        const key = subject[filter as keyof SubjectInterface]
+
+        if ((key as DosenInterface[])[0]?.lab !== undefined) {
+            return (key as DosenInterface[]).some((lecturer) => {
+                if (lecturer == null) return false
+                return lecturer?.nama.toLowerCase().indexOf(value.toLowerCase()) !== -1
+            })
+        }
+
+        if (typeof key === 'string') {
+            return (key as string).toLowerCase().indexOf(value.toLowerCase()) !== -1
+        }
+        
+        if (typeof key === 'number') {
+            return (key as number).toString().indexOf(value) !== -1
+        }
+        return false
+    }
     
-    
+    const handleFilter = (e: FormEvent) => {
+        e.preventDefault()
+        let filteredData = allSchedule
+        for (const key in filterData) {
+            if (filterData[key].checked) {
+                filteredData = filteredData.filter((subject) => filterSubject(subject, key))
+            }
+        }
+        setFilteredItems(filteredData)
+    }
+
+
     return (
         <main className="flex justify-between">
             <section className="relative min-h-screen h-screen border-r-2 border-gray-500 w-[30%]">
@@ -31,15 +103,16 @@ function Search({allSchedule}: SearchProps) {
                             <form
                                 className="flex justify-center flex-col w-full"
                                 id="filter"
+                                onSubmit={(e) => handleFilter(e)}
                             >
                                 {filters.map((filter) => {
                                     return (
-                                        <div className="w-full flex justify-between pb-4">
+                                        <div className="w-full flex justify-between pb-4" key={filter}>
                                             <div>
-                                                <input type="checkbox"></input>
+                                                <input type="checkbox" onChange={(e) => handleFilterCheckedChange(filter)}></input>
                                                 <label className="ml-5">{filter}</label>
                                             </div>
-                                            <input type="text"></input>
+                                            <input type="text" onChange={(e) => handleFilterValueChange(filter, e.target.value)}></input>
                                         </div>
                                     );
                                 })}
@@ -58,7 +131,7 @@ function Search({allSchedule}: SearchProps) {
             </section>
             <section className="min-h-screen w-[70%] grid grid-cols-3 overflow-auto h-screen p-5 gap-3">
                 {
-                    allSchedule.map(item => {
+                    filteredItems.map((item, index) => {
                         return (
                             <Card data={item} />
                         )
