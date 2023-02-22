@@ -2,11 +2,10 @@ import React, { FormEvent, useState } from "react";
 import DosenInterface from "../../interfaces/DosenInterface";
 import FilterInterface from "../../interfaces/FilterInterface";
 import SubjectInterface from "../../interfaces/SubjectInterface";
+import SearchProps from "../../interfaces/SearchProps";
 import Card from "./Card"
 
-interface SearchProps {
-    allSchedule: Array<SubjectInterface>
-}
+
 
 function Search({allSchedule}: SearchProps) {
     const [filteredItems, setFilteredItems] = useState<SubjectInterface[]>(allSchedule)
@@ -60,6 +59,12 @@ function Search({allSchedule}: SearchProps) {
         setFilterData(newFilterData)
     }
 
+    const arrayIncludes= (from: string, arr: Array<string>) => {
+        var result: boolean = true;
+        arr.forEach((val:string) => result &&= from.includes(val))
+        return result;
+    }
+
     const filterSubject = (subject: SubjectInterface, filter: string) => {
         const value = filterData[filter].value
         const key = subject[filter as keyof SubjectInterface]
@@ -72,7 +77,7 @@ function Search({allSchedule}: SearchProps) {
         }
 
         if (filter == "subject"){
-            return (key as string).toLowerCase().includes(value.toLowerCase())
+            return arrayIncludes((key as string).toLowerCase(), value.toLowerCase().split(" "))
         }
 
         if (typeof key === 'string') {

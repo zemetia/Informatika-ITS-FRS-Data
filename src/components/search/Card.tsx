@@ -1,8 +1,5 @@
 import SubjectInterface from "../../interfaces/SubjectInterface"
-
-interface CardProps {
-    data: SubjectInterface;
-}
+import CardProps from "../../interfaces/CardProps"
 
 export default function Card({data}: CardProps) {
     return (

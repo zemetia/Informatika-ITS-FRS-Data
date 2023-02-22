@@ -1,13 +1,9 @@
 import {useState, ChangeEvent, useEffect} from 'react'
 import Dosen from '../../assets/json/dosen.json'
-import SubjectInterface from '../../interfaces/SubjectInterface'
+import ScheduleProps from '../../interfaces/ScheduleProps'
 import parsing from '../../parsing/ParseFunction'
 
-interface ScheduleProps {
-    showModal: boolean;
-    setShowModal: (data: boolean) => void;
-    setSchedules: (data: Array<SubjectInterface>) => void;
-}
+
 
 function Schedule({showModal, setShowModal, setSchedules}: ScheduleProps) {
     const [jadwal, setJadwal] = useState<string>("")

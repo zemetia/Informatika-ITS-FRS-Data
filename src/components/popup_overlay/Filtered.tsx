@@ -1,9 +1,5 @@
 import { useState } from "react";
-
-interface FilterProps {
-  showModal: boolean;
-  setShowModal: (data: boolean) => void;
-}
+import FilterProps from "../../interfaces/FilterProps";
 
 const Filtered = ({showModal, setShowModal}: FilterProps) => {
 
