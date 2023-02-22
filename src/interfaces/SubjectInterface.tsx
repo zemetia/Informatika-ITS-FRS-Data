@@ -7,7 +7,7 @@ export default interface SubjectInterface {
     semester: number,
     sks: number,
     day: string,
-    lecturer: Array<DosenInterface>,
+    lecturer: Array<DosenInterface | null>,
     hour: string,
     start: string
 }
