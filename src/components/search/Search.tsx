@@ -69,6 +69,10 @@ function Search({allSchedule}: SearchProps) {
             })
         }
 
+        if (filter == "subject"){
+            return (key as string).toLowerCase().includes(value.toLowerCase())
+        }
+
         if (typeof key === 'string') {
             return (key as string).toLowerCase().indexOf(value.toLowerCase()) !== -1
         }
@@ -94,11 +98,11 @@ function Search({allSchedule}: SearchProps) {
     return (
         <main className="flex justify-between">
             <section className="relative min-h-screen h-screen border-r-2 border-gray-500 w-[30%]">
-                <div className="flex justify-center flex-col drop-shadow-none">
-                    <h3 className="font-primary text-center mt-20 font-semibold underline underline-offset-4">
+                <div className="flex justify-center flex-col drop-shadow-none p-5 gap-3">
+                    <h3 className="font-primary text-center font-semibold underline underline-offset-4">
                         FILTER OPTIONS
                     </h3>
-                    <section className="mt-10 border-2 mx-10 drop-shadow-md rounded-xl">
+                    <section className="border-2 drop-shadow-md rounded-xl">
                         <div className="h-full w-full p-6">
                             <form
                                 className="flex justify-center flex-col w-full"
@@ -107,12 +111,12 @@ function Search({allSchedule}: SearchProps) {
                             >
                                 {filters.map((filter) => {
                                     return (
-                                        <div className="w-full flex justify-between pb-4" key={filter}>
+                                        <div className="w-full flex justify-between pb-4 flex-col gap-1" key={filter}>
                                             <div>
                                                 <input type="checkbox" onChange={(e) => handleFilterCheckedChange(filter)}></input>
-                                                <label className="ml-5">{filter}</label>
+                                                <label className="ml-5" style={{textTransform: "capitalize"}}>{filter}</label>
                                             </div>
-                                            <input type="text" onChange={(e) => handleFilterValueChange(filter, e.target.value)}></input>
+                                            <input type="text" className="p-2" onChange={(e) => handleFilterValueChange(filter, e.target.value)}></input>
                                         </div>
                                     );
                                 })}
@@ -123,11 +127,11 @@ function Search({allSchedule}: SearchProps) {
                         </div>
                     </section>
                 </div>
-                <section className="absolute bottom-10 left-[50%] -translate-x-1/2">
+                {/* <section className="absolute bottom-10 left-[50%] -translate-x-1/2">
                     <h3 className="text-center items-center text-xl">
                         powered by: <span className="text-3xl font-semibold ml-3">REMTIL</span>
                     </h3>
-                </section>
+                </section> */}
             </section>
             <section className="min-h-screen w-[70%] grid grid-cols-3 overflow-auto h-screen p-5 gap-3">
                 {
