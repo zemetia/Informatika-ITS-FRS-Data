@@ -2,6 +2,7 @@ import React, { FormEvent, useState } from "react";
 import DosenInterface from "../../interfaces/DosenInterface";
 import FilterInterface from "../../interfaces/FilterInterface";
 import SubjectInterface from "../../interfaces/SubjectInterface";
+import Card from "./Card"
 
 interface SearchProps {
     allSchedule: Array<SubjectInterface>
@@ -118,7 +119,7 @@ function Search({allSchedule}: SearchProps) {
                             </form>
                         </div>
                         <div className="flex justify-center w-full pb-6">
-                            <button className="btn w-2/3" type="submit" form="filter">Filter</button>
+                            <button className="btn w-2/3" form="filter">Filter</button>
                         </div>
                     </section>
                 </div>
@@ -128,28 +129,11 @@ function Search({allSchedule}: SearchProps) {
                     </h3>
                 </section>
             </section>
-            <section className="min-h-screen w-[70%] grid grid-cols-2 overflow-auto h-screen">
+            <section className="min-h-screen w-[70%] grid grid-cols-3 overflow-auto h-screen p-5 gap-3">
                 {
                     filteredItems.map((item, index) => {
                         return (
-                            <div className="flex justify-center mt-10 mb-10" key={index}>
-                                <div className="card">
-                                    <div>{item.subject}</div>
-                                    <div>{item.semester}</div>
-                                    <div>{item.sks}</div>
-                                    <div>{item.day}</div>
-                                    <div>{item.hour}</div>
-                                    {
-                                        item.lecturer?.map((item, index) => {
-                                            return (
-                                                <div key={index}>
-                                                    {item && (<div>{item.nama}</div>)}
-                                                </div>
-                                            )
-                                        })
-                                    }
-                                </div>
-                            </div>
+                            <Card data={item} />
                         )
                     })
                 }
