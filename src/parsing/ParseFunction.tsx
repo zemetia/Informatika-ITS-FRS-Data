@@ -1,40 +1,40 @@
-import DosenInterface from '../interfaces/DosenInterface'
-import SubjectInterface from '../interfaces/SubjectInterface'
+import DosenInterface from "@/types/entity/dosen-interface"
+import SubjectInterface from "@/types/entity/subject-interface"
 
-export function Parsing (rawData: string, dosen: {[key: string]: DosenInterface}): Array<SubjectInterface> 
+export default function Parsing (rawData: string, dosen: {[key: string]: DosenInterface}): Array<SubjectInterface> 
 {
-    let data: Array<string> = rawData.split('\n')
-    let cellData: Array<Array<string>> = []
+    const data: Array<string> = rawData.split('\n')
+    const cellData: Array<Array<string>> = []
     data.forEach(value => cellData.push(value.split('\t')))
 
-    let header: Array<string> = cellData[0] //contain the information about the class
-    let days: Array<string> = ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"]
-    let dayData: { [key: string]: Array<Array<string>> } = {}
+    const header: Array<string> = cellData[0] //contain the information about the class
+    const days: Array<string> = ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"]
+    const dayData: { [key: string]: Array<Array<string>> } = {}
 
     days.forEach((value, index) => 
         dayData[value] = cellData.slice(1 + (14 * index), 14 * (index + 1))
     )
 
-    let courses: Array<SubjectInterface> = []
+    const courses: Array<SubjectInterface> = []
 
     for(const [dayName, day] of Object.entries(dayData)) {
         day.forEach((dayValue, dayIndex) => {
             dayValue.forEach((schValue, schIndex) => {
-                var splittedData: Array<string> = schValue.split('/')
+                const splittedData: Array<string> = schValue.split('/')
 
                 if(splittedData[0].toLowerCase().match(/sem\s[0-9]/)) {
-                    var splittedSubject: Array<string> = day[ dayIndex - 1 ][ schIndex ].split('-')
+                    const splittedSubject: Array<string> = day[ dayIndex - 1 ][ schIndex ].split('-')
 
                 //Subject - Class split
-                var subject: string = splittedSubject[0].trim()
-                var subjectClass: string = splittedSubject[1]? splittedSubject[1].trim() : "None" 
+                const subject: string = splittedSubject[0].trim()
+                const subjectClass: string = splittedSubject[1]? splittedSubject[1].trim() : "None" 
 
                 //Semester / SKS / Lecturer 
 
-                var semester:number = splittedData[0]? Number( splittedData[0].slice(-1) ) : 0
-                var sks: number = splittedData[1]? Number( splittedData[1].slice(0, 1) ) : 0
-                var rawLecturer = splittedData[2]? splittedData[2].split(' - ') : null
-                var lecturer: Array<DosenInterface> = []
+                const semester:number = splittedData[0]? Number( splittedData[0].slice(-1) ) : 0
+                const sks: number = splittedData[1]? Number( splittedData[1].slice(0, 1) ) : 0
+                const rawLecturer = splittedData[2]? splittedData[2].split(' - ') : null
+                const lecturer: Array<DosenInterface> = []
                 if( rawLecturer ) {
                     rawLecturer.forEach( schValue => {
                         lecturer.push( dosen[ schValue ] )
@@ -42,11 +42,11 @@ export function Parsing (rawData: string, dosen: {[key: string]: DosenInterface}
                 }
 
                 //Hour Processing
-                var start:string = day[dayIndex - 1][1].split("-")[0].trim()
-                var end:string = day[dayIndex][1].split("-")[1].trim()
-                var fullTime = start + " - " + end
+                const start:string = day[dayIndex - 1][1].split("-")[0].trim()
+                const end:string = day[dayIndex][1].split("-")[1].trim()
+                const fullTime = start + " - " + end
 
-                var course: SubjectInterface = {
+                const course: SubjectInterface = {
                     subject: subject,
                     subjectClass: subjectClass,
                     classRoom: header[schIndex],
@@ -66,5 +66,3 @@ export function Parsing (rawData: string, dosen: {[key: string]: DosenInterface}
 
     return courses
 }
-
-export default Parsing
