@@ -18,7 +18,7 @@ export default function SEO({ title, description, ...rest }: SEOProps) {
         title: 'IFITS FRS',
         siteName: 'IFITS FRS',
         description:
-          "Filtering dan Merancang FRS untuk mahasiswa Teknik Informatika ITS Surabaya.",
+          'Filtering dan Merancang FRS untuk mahasiswa Teknik Informatika ITS Surabaya.',
         images: [
           {
             url: `${process.env.NEXT_PUBLIC_URL}/images/og-itsexpo.png`,

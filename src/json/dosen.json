@@ -1,309 +1,309 @@
 {
-    "FB": {
-        "nama": "Fajar Baskoro, S.Kom., M.T.",
-        "lab": "Algoritma dan Pemrograman",
-        "posisi": "Anggota",
-        "rekomen": 0
-    },
+  "FB": {
+    "nama": "Fajar Baskoro, S.Kom., M.T.",
+    "lab": "Algoritma dan Pemrograman",
+    "posisi": "Anggota",
+    "rekomen": 0
+  },
 
-    "RL": {
-        "nama": "Rully Soelaiman, S. Kom., M.Kom.",
-        "lab": "Algoritma dan Pemrograman",
-        "posisi": "Anggota",
-        "rekomen": 3
-    },
-    
-    "IS": {
-        "nama": "Irfan Subakti",
-        "lab": "Algoritma dan Pemrograman",
-        "posisi": "Anggota",
-        "rekomen": 0
-    },
+  "RL": {
+    "nama": "Rully Soelaiman, S. Kom., M.Kom.",
+    "lab": "Algoritma dan Pemrograman",
+    "posisi": "Anggota",
+    "rekomen": 3
+  },
 
-    "DP": {
-        "nama": "Dr. Diana Purwitasari, S.Kom., M.Sc.",
-        "lab": "Algoritma dan Pemrograman",
-        "posisi": "Ketua",
-        "rekomen": 4
-    },
+  "IS": {
+    "nama": "Irfan Subakti",
+    "lab": "Algoritma dan Pemrograman",
+    "posisi": "Anggota",
+    "rekomen": 0
+  },
 
-    "AR": {
-        "nama": "Ir. F.X. Arunanto, M.Sc.",
-        "lab": "Algoritma dan Pemrograman",
-        "posisi": "Anggota",
-        "rekomen": 0
-    },
+  "DP": {
+    "nama": "Dr. Diana Purwitasari, S.Kom., M.Sc.",
+    "lab": "Algoritma dan Pemrograman",
+    "posisi": "Ketua",
+    "rekomen": 4
+  },
 
-    "AB": {
-        "nama": "Agus Budi Raharjo, PhD",
-        "lab": "Algoritma dan Pemrograman",
-        "posisi": "Anggota",
-        "rekomen": 5
-    },
+  "AR": {
+    "nama": "Ir. F.X. Arunanto, M.Sc.",
+    "lab": "Algoritma dan Pemrograman",
+    "posisi": "Anggota",
+    "rekomen": 0
+  },
 
-    "SD": {
-        "nama": "Prof. Ir. Supeno Djanali, MSc, Ph.D.",
-        "lab": "Arsitektur dan Jaringan Komputer",
-        "posisi": "Anggota",
-        "rekomen": 1
-    },
-    
-    "RM": {
-        "nama": "Royyana Muslim I, S.Kom, M.Kom, Ph.D.",
-        "lab": "Arsitektur dan Jaringan Komputer",
-        "posisi": "Anggota",
-        "rekomen": 0
-    },
+  "AB": {
+    "nama": "Agus Budi Raharjo, PhD",
+    "lab": "Algoritma dan Pemrograman",
+    "posisi": "Anggota",
+    "rekomen": 5
+  },
 
-    "RA": {
-        "nama": "Dr. Eng. Radityo Anggoro, S.Kom, M.Eng.",
-        "lab": "Arsitektur dan Jaringan Komputer",
-        "posisi": "Anggota",
-        "rekomen": 0
-    },
+  "SD": {
+    "nama": "Prof. Ir. Supeno Djanali, MSc, Ph.D.",
+    "lab": "Arsitektur dan Jaringan Komputer",
+    "posisi": "Anggota",
+    "rekomen": 1
+  },
 
-    "WS": {
-        "nama": "Wahyu Suadi",
-        "lab": "Arsitektur dan Jaringan Komputer",
-        "posisi": "Anggota",
-        "rekomen": 2
-    },
+  "RM": {
+    "nama": "Royyana Muslim I, S.Kom, M.Kom, Ph.D.",
+    "lab": "Arsitektur dan Jaringan Komputer",
+    "posisi": "Anggota",
+    "rekomen": 0
+  },
 
-    "JL": {
-        "nama": "Prof. Dr. Ir. Joko Lianto Buliali, M.Sc",
-        "lab": "Pemodelan dan Terapan Komputasi",
-        "posisi": "Anggota",
-        "rekomen": 0
-    },
+  "RA": {
+    "nama": "Dr. Eng. Radityo Anggoro, S.Kom, M.Eng.",
+    "lab": "Arsitektur dan Jaringan Komputer",
+    "posisi": "Anggota",
+    "rekomen": 0
+  },
 
-    "AS": {
-        "nama": "Dr. Ahmad Saikhu, S, Si, MT.",
-        "lab": "Pemodelan dan Terapan Komputasi",
-        "posisi": "Anggota",
-        "rekomen": 0
-    },
+  "WS": {
+    "nama": "Wahyu Suadi",
+    "lab": "Arsitektur dan Jaringan Komputer",
+    "posisi": "Anggota",
+    "rekomen": 2
+  },
 
-    "VH": {
-        "nama": "Victor Hariadi, S.Si, M.Kom",
-        "lab": "Pemodelan dan Terapan Komputasi",
-        "posisi": "Ketua",
-        "rekomen": 3
-    },
+  "JL": {
+    "nama": "Prof. Dr. Ir. Joko Lianto Buliali, M.Sc",
+    "lab": "Pemodelan dan Terapan Komputasi",
+    "posisi": "Anggota",
+    "rekomen": 0
+  },
 
-    "BA": {
-        "nama": "Bilqis Amaliah, S.Kom, M. Kom",
-        "lab": "Pemodelan dan Terapan Komputasi",
-        "posisi": "TB",
-        "rekomen": 3
-    },
+  "AS": {
+    "nama": "Dr. Ahmad Saikhu, S, Si, MT.",
+    "lab": "Pemodelan dan Terapan Komputasi",
+    "posisi": "Anggota",
+    "rekomen": 0
+  },
 
-    "AW": {
-        "nama": "Arya Yudhi Wijaya, S.Kom., M.Kom.",
-        "lab": "Pemodelan dan Terapan Komputasi",
-        "posisi": "Anggota",
-        "rekomen": 0
-    },
+  "VH": {
+    "nama": "Victor Hariadi, S.Si, M.Kom",
+    "lab": "Pemodelan dan Terapan Komputasi",
+    "posisi": "Ketua",
+    "rekomen": 3
+  },
 
-    "YP": {
-        "nama": "Yudhi Purwananto, S. Kom, M.Kom.",
-        "lab": "Pemodelan dan Terapan Komputasi",
-        "posisi": "Anggota",
-        "rekomen": 0
-    },
+  "BA": {
+    "nama": "Bilqis Amaliah, S.Kom, M. Kom",
+    "lab": "Pemodelan dan Terapan Komputasi",
+    "posisi": "TB",
+    "rekomen": 3
+  },
 
-    "DH": {
-        "nama": "Dr. Darlis Herumurti",
-        "lab": "Grafika Interaksi dan Game",
-        "posisi": "Anggota",
-        "rekomen": 0
-    },
+  "AW": {
+    "nama": "Arya Yudhi Wijaya, S.Kom., M.Kom.",
+    "lab": "Pemodelan dan Terapan Komputasi",
+    "posisi": "Anggota",
+    "rekomen": 0
+  },
 
-    "AY": {
-        "nama": "Anny Yuniarti, S.Kom, M.Comp.Sc.",
-        "lab": "Grafika Interaksi dan Game",
-        "posisi": "TB",
-        "rekomen": 0
-    },
+  "YP": {
+    "nama": "Yudhi Purwananto, S. Kom, M.Kom.",
+    "lab": "Pemodelan dan Terapan Komputasi",
+    "posisi": "Anggota",
+    "rekomen": 0
+  },
 
-    "IM": {
-        "nama": "Imam Kuswardayan, S.Kom., M.T.",
-        "lab": "Grafika Interaksi dan Game",
-        "posisi": "Ketua",
-        "rekomen": 5
-    },
+  "DH": {
+    "nama": "Dr. Darlis Herumurti",
+    "lab": "Grafika Interaksi dan Game",
+    "posisi": "Anggota",
+    "rekomen": 0
+  },
 
-    "WN": {
-        "nama": "Wijayanti Nurul Khotimah, S. Kom., M.Sc TB",
-        "lab": "Grafika Interaksi dan Game",
-        "posisi": "TB",
-        "rekomen": 0
-    },
+  "AY": {
+    "nama": "Anny Yuniarti, S.Kom, M.Comp.Sc.",
+    "lab": "Grafika Interaksi dan Game",
+    "posisi": "TB",
+    "rekomen": 0
+  },
 
-    "HF": {
-        "nama": "Hadziq Fabroyir, PhD",
-        "lab": "Grafika Interaksi dan Game",
-        "posisi": "Anggota",
-        "rekomen": 5
-    },
+  "IM": {
+    "nama": "Imam Kuswardayan, S.Kom., M.T.",
+    "lab": "Grafika Interaksi dan Game",
+    "posisi": "Ketua",
+    "rekomen": 5
+  },
 
-    "SA": {
-        "nama": "Siska Arifiani, S. Kom, M.Kom",
-        "lab": "Grafika Interaksi dan Game",
-        "posisi": "Anggota",
-        "rekomen": 0
-    },
+  "WN": {
+    "nama": "Wijayanti Nurul Khotimah, S. Kom., M.Sc TB",
+    "lab": "Grafika Interaksi dan Game",
+    "posisi": "TB",
+    "rekomen": 0
+  },
 
-    "WW": {
-        "nama": "Waskitho Wibisono, S.Kom, M.Eng., Ph",
-        "lab": "Komputasi Berbasis Jaringan",
-        "posisi": "Anggota",
-        "rekomen": 0
-    },
+  "HF": {
+    "nama": "Hadziq Fabroyir, PhD",
+    "lab": "Grafika Interaksi dan Game",
+    "posisi": "Anggota",
+    "rekomen": 5
+  },
 
-    "TA": {
-        "nama": "Tohari Ahmad, S.Kom, M.IT, Ph.D",
-        "lab": "Komputasi Berbasis Jaringan",
-        "posisi": "Ketua",
-        "rekomen": 3
-    },
+  "SA": {
+    "nama": "Siska Arifiani, S. Kom, M.Kom",
+    "lab": "Grafika Interaksi dan Game",
+    "posisi": "Anggota",
+    "rekomen": 0
+  },
 
-    "HS": {
-        "nama": "Hudan Studiawan, S. Kom, M.Kom",
-        "lab": "Komputasi Berbasis Jaringan",
-        "posisi": "TB",
-        "rekomen": 0
-    },
+  "WW": {
+    "nama": "Waskitho Wibisono, S.Kom, M.Eng., Ph",
+    "lab": "Komputasi Berbasis Jaringan",
+    "posisi": "Anggota",
+    "rekomen": 0
+  },
 
-    "BS": {
-        "nama": "Baskoro Adi P., S.Kom., M.Kom., PhD",
-        "lab": "Komputasi Berbasis Jaringan",
-        "posisi": "Anggota",
-        "rekomen": 5
-    },
+  "TA": {
+    "nama": "Tohari Ahmad, S.Kom, M.IT, Ph.D",
+    "lab": "Komputasi Berbasis Jaringan",
+    "posisi": "Ketua",
+    "rekomen": 3
+  },
 
-    "BJ": {
-        "nama": "Bagus Jati S, S.Kom, PhD",
-        "lab": "Komputasi Berbasis Jaringan",
-        "posisi": "Anggota",
-        "rekomen": 0
-    },
+  "HS": {
+    "nama": "Hudan Studiawan, S. Kom, M.Kom",
+    "lab": "Komputasi Berbasis Jaringan",
+    "posisi": "TB",
+    "rekomen": 0
+  },
 
-    "HT": {
-        "nama": "Prof.Ir.Handayani Tjandrasa, M.Sc, Ph.",
-        "lab": "Komputasi Cerdas dan Visi",
-        "posisi": "Anggota",
-        "rekomen": 0
-    },
+  "BS": {
+    "nama": "Baskoro Adi P., S.Kom., M.Kom., PhD",
+    "lab": "Komputasi Berbasis Jaringan",
+    "posisi": "Anggota",
+    "rekomen": 5
+  },
 
-    "NS": {
-        "nama": "Dr. Eng. Nanik Suciati, S.Kom, M.Kom",
-        "lab": "Komputasi Cerdas dan Visi",
-        "posisi": "Ketua",
-        "rekomen": 0
-    },
+  "BJ": {
+    "nama": "Bagus Jati S, S.Kom, PhD",
+    "lab": "Komputasi Berbasis Jaringan",
+    "posisi": "Anggota",
+    "rekomen": 0
+  },
 
-    "CF": {
-        "nama": "Dr. Eng. ChastineFatichah, S.Kom, M.Kd",
-        "lab": "Komputasi Cerdas dan Visi",
-        "posisi": "Anggota",
-        "rekomen": 0
-    },
+  "HT": {
+    "nama": "Prof.Ir.Handayani Tjandrasa, M.Sc, Ph.",
+    "lab": "Komputasi Cerdas dan Visi",
+    "posisi": "Anggota",
+    "rekomen": 0
+  },
 
-    "DA": {
-        "nama": "Dini Adni Navastara, S.Kom., M.Sc.",
-        "lab": "Komputasi Cerdas dan Visi",
-        "posisi": "Anggota",
-        "rekomen": 0
-    },
+  "NS": {
+    "nama": "Dr. Eng. Nanik Suciati, S.Kom, M.Kom",
+    "lab": "Komputasi Cerdas dan Visi",
+    "posisi": "Ketua",
+    "rekomen": 0
+  },
 
-    "AZ": {
-        "nama": "Prof. Dr. Eng. Agus Zainal Arifin, S.Kom,",
-        "lab": "Komputasi Cerdas dan Visi",
-        "posisi": "Anggota",
-        "rekomen": 0
-    },
+  "CF": {
+    "nama": "Dr. Eng. ChastineFatichah, S.Kom, M.Kd",
+    "lab": "Komputasi Cerdas dan Visi",
+    "posisi": "Anggota",
+    "rekomen": 0
+  },
 
-    "RS": {
-        "nama": "Prof. Drs.Ec.Ir. Riyanarto Sarno, M.Sc, PH",
-        "lab": "Manajemen Cerdas Informasi",
-        "posisi": "Ketua",
-        "rekomen": 0
-    },
+  "DA": {
+    "nama": "Dini Adni Navastara, S.Kom., M.Sc.",
+    "lab": "Komputasi Cerdas dan Visi",
+    "posisi": "Anggota",
+    "rekomen": 0
+  },
 
-    "NF": {
-        "nama": "Nurul Fajrin Atiyani, S.Kom., M.Sc.",
-        "lab": "Manajemen Cerdas Informasi",
-        "posisi": "Anggota",
-        "rekomen": 0
-    },
+  "AZ": {
+    "nama": "Prof. Dr. Eng. Agus Zainal Arifin, S.Kom,",
+    "lab": "Komputasi Cerdas dan Visi",
+    "posisi": "Anggota",
+    "rekomen": 0
+  },
 
-    "AL": {
-        "nama": "Adhatus Solichah A., S.Kom., M..",
-        "lab": "Manajemen Cerdas Informasi",
-        "posisi": "Anggota",
-        "rekomen": 0
-    },
+  "RS": {
+    "nama": "Prof. Drs.Ec.Ir. Riyanarto Sarno, M.Sc, PH",
+    "lab": "Manajemen Cerdas Informasi",
+    "posisi": "Ketua",
+    "rekomen": 0
+  },
 
-    "RN": {
-        "nama": "Ratih Nur Esti Anggraini, S.Kom, M.Sc.,",
-        "lab": "Manajemen Cerdas Informasi",
-        "posisi": "TB",
-        "rekomen": 0
-    },
+  "NF": {
+    "nama": "Nurul Fajrin Atiyani, S.Kom., M.Sc.",
+    "lab": "Manajemen Cerdas Informasi",
+    "posisi": "Anggota",
+    "rekomen": 0
+  },
 
-    "MN": {
-        "nama": "Abdul Munif, S.Kom., M.Sc.",
-        "lab": "Manajemen Cerdas Informasi",
-        "posisi": "Anggota",
-        "rekomen": 0
-    },
+  "AL": {
+    "nama": "Adhatus Solichah A., S.Kom., M..",
+    "lab": "Manajemen Cerdas Informasi",
+    "posisi": "Anggota",
+    "rekomen": 0
+  },
 
-    "SC": {
-        "nama": "Shintami, S.Kom, PhD",
-        "lab": "Manajemen Cerdas Informasi",
-        "posisi": "Anggota",
-        "rekomen": 0
-    },
+  "RN": {
+    "nama": "Ratih Nur Esti Anggraini, S.Kom, M.Sc.,",
+    "lab": "Manajemen Cerdas Informasi",
+    "posisi": "TB",
+    "rekomen": 0
+  },
 
-    "KR": {
-        "nama": "Kelly Rosa Sungkono, S.Kom, M. Kom.",
-        "lab": "Manajemen Cerdas Informasi",
-        "posisi": "Anggota",
-        "rekomen": 5
-    },
+  "MN": {
+    "nama": "Abdul Munif, S.Kom., M.Sc.",
+    "lab": "Manajemen Cerdas Informasi",
+    "posisi": "Anggota",
+    "rekomen": 0
+  },
 
-    "ST": {
-        "nama": "Dr.Ir. Siti Rochimah, MT",
-        "lab": "Rekayasa Perangkat Lunak",
-        "posisi": "Ketua",
-        "rekomen": 0
-    },
+  "SC": {
+    "nama": "Shintami, S.Kom, PhD",
+    "lab": "Manajemen Cerdas Informasi",
+    "posisi": "Anggota",
+    "rekomen": 0
+  },
 
-    "DO": {
-        "nama": "Daniel O. Siahaan, S.Kom. M,Sc, PD.Eng",
-        "lab": "Rekayasa Perangkat Lunak",
-        "posisi": "Anggota",
-        "rekomen": 0
-    },
+  "KR": {
+    "nama": "Kelly Rosa Sungkono, S.Kom, M. Kom.",
+    "lab": "Manajemen Cerdas Informasi",
+    "posisi": "Anggota",
+    "rekomen": 5
+  },
 
-    "SR": {
-        "nama": "Sarwosri, S. Kom. M.T",
-        "lab": "Rekayasa Perangkat Lunak",
-        "posisi": "Anggota",
-        "rekomen": 0
-    },
+  "ST": {
+    "nama": "Dr.Ir. Siti Rochimah, MT",
+    "lab": "Rekayasa Perangkat Lunak",
+    "posisi": "Ketua",
+    "rekomen": 0
+  },
 
-    "UY": {
-        "nama": "Dr. Umi Laili Yuhana, S.Kom., M.Sc.",
-        "lab": "Rekayasa Perangkat Lunak",
-        "posisi": "Anggota",
-        "rekomen": 0
-    },
+  "DO": {
+    "nama": "Daniel O. Siahaan, S.Kom. M,Sc, PD.Eng",
+    "lab": "Rekayasa Perangkat Lunak",
+    "posisi": "Anggota",
+    "rekomen": 0
+  },
 
-    "RJ": {
-        "nama": "Rizky Januar Akbar, S. Kom., M.Eng.",
-        "lab": "Rekayasa Perangkat Lunak",
-        "posisi": "Anggota",
-        "rekomen": 5
-    }
+  "SR": {
+    "nama": "Sarwosri, S. Kom. M.T",
+    "lab": "Rekayasa Perangkat Lunak",
+    "posisi": "Anggota",
+    "rekomen": 0
+  },
+
+  "UY": {
+    "nama": "Dr. Umi Laili Yuhana, S.Kom., M.Sc.",
+    "lab": "Rekayasa Perangkat Lunak",
+    "posisi": "Anggota",
+    "rekomen": 0
+  },
+
+  "RJ": {
+    "nama": "Rizky Januar Akbar, S. Kom., M.Eng.",
+    "lab": "Rekayasa Perangkat Lunak",
+    "posisi": "Anggota",
+    "rekomen": 5
+  }
 }
